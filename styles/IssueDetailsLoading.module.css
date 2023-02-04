@@ -1,0 +1,28 @@
+.details {
+    background-color: #0f0f0f;
+    padding: 3rem;
+    height: 100vh;
+  }
+
+/* make the classes 'title', 'summary' and 'description' act like a loading skeleton animation */
+
+.title {
+    background-color: #1f1f1f;
+    height: 2rem;
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+  
+  .summary {
+    background-color: #1f1f1f;
+    height: 1rem;
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+  
+  .description {
+    background-color: #1f1f1f;
+    height: 1rem;
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }

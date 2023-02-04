@@ -4,13 +4,17 @@ import IssueDetails from '@components/issues/IssueDetails';
 
 async function IssueDetailsPage({ params }: {params: {id: string}}) {
   const prisma = new PrismaClient();
-  const issue = await prisma.issue.findFirst({ where: { id: +params.id } });
-
-  if (!issue) {
-    throw new Error('Issue not found!')
-  }
+  await wait(1);
+  const issue = await prisma.issue.findUniqueOrThrow({ where: { id: +params.id } }).catch(() => {throw new Error('Issue not found!')});
 
   return <IssueDetails issue={issue} />;
 }
 
 export default IssueDetailsPage;
+
+
+function wait(seconds: number) {
+  return new Promise<void>((resolve, reject) =>
+    setTimeout(() => resolve(), seconds * 1000)
+  );
+}

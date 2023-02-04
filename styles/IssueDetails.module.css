@@ -1,5 +1,17 @@
 .details {
-    background-color: #0f0f0f;
-    padding: 3rem;
-    height: 100vh;
-  }
+  background-color: #0f0f0f;
+  padding: 3rem;
+  height: 100vh;
+}
+
+.title {
+  margin-bottom: 0.5rem;
+}
+
+.summary {
+  margin-bottom: 0.5rem;
+}
+
+.description {
+  margin-bottom: 0.5rem;
+}
